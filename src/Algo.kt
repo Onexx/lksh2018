@@ -2,10 +2,11 @@ import java.util.*
 
 val scan = java.util.Scanner(System.`in`)
 
-fun search(index: String, value:String, memory: Deque<Pair<String, String>>){
-    var result = ArrayDeque<Pair<String, String>>()
+fun search(memory: Vector<Pair<String, String>>){
+    var result = Vector<Pair<String, String>>()
     for(i in memory){
-        //var t: Int = min(i.first.length, index.length)
+        var index: String = scan.next()
+        var value: String = scan.next()
         var pos = 0
         for(j in i.first.chars()){
             if(index[pos] == i.first[j]){
@@ -15,7 +16,7 @@ fun search(index: String, value:String, memory: Deque<Pair<String, String>>){
                 pos = 0
             }
             if(pos == index.length - 1){
-                result.addLast(i)
+                result.add(i)
             }
         }
     }
@@ -30,40 +31,55 @@ fun search(index: String, value:String, memory: Deque<Pair<String, String>>){
     }
 }
 
-fun delete(index: String, value:String, memory: Deque<Pair<String, String>>){
-    for(i in memory){
-        if(i.first == index || i.second == value){
-            println("Deleting pair ${i.first} - ${i.second}")
-            memory.remove(Pair(i.first, i.second))
+fun delete(memory: Vector<Pair<String, String>>){
+    var index: String = scan.next()
+    var value: String = scan.next()
+    var result: Vector<Int> = Vector()
+    for(i in 0 until memory.size){
+        if(memory[i].first == index || memory[i].second == value){
+            println("Deleting pair ${memory[i].first} - ${memory[i].second}")
+            result.add(i)
+        }
+    }
+    when (result.size){
+        0 -> println("Nothing found")
+        1 -> { println("Deleting pair ${memory[result[0]].first} - ${memory[result[0]].second}")
+            memory.remove(Pair(memory[result[0]].first, memory[result[0]].second)) }
+        else -> {
+            println("Write number of pair, which you want to delete")
+            for(i in 0 until result.size){
+                println("${i + 1}) ${memory[result[i]].first} - ${memory[result[i]].second}")
+            }
+            var p = scan.nextInt()
+            while(p > result.size || p <= 0) {
+                println("Incorrect input")
+                p = scan.nextInt()
+            }
+            println("Deleting pair ${memory[result[0]].first} - ${memory[result[0]].second}")
+            memory.remove(Pair(memory[result[p-1]].first, memory[result[p-1]].second))
         }
     }
 }
 
 fun main(args: Array<String>){
     var inp = ""
-    var memory: Deque<Pair<String,String>>  = ArrayDeque<Pair<String, String> >()
-    println("Add instructions")
+    var memory: Vector<Pair<String,String>>  = Vector<Pair<String, String> >()
+    println("Write 'help' for help")
     while(inp != "Exit" || inp != "exit"){
         if(inp == "Add" || inp == "add"){
             val index: String = scan.next()
             var value: String = scan.next()
-            memory.addLast(Pair(index, value))
+            memory.add(Pair(index, value))
             println("Completed")
         }
         if(inp == "Delete" || inp == "delete"){
-            var index: String = scan.next()
-            var value: String = scan.next()
-            for(i in memory){
-                if(i.first == index || i.second == value){
-                    println("Deleting pair ${i.first} - ${i.second}")
-                    memory.remove(Pair(i.first, i.second))
-                }
-            }
+            delete(memory)
         }
         if(inp == "Find" || inp == "find"){
-            var index: String = scan.next()
-            var value: String = scan.next()
-            search(index, value, memory)
+            search(memory)
+        }
+        if(inp == "Help" || inp == "help"){
+            println("help option")
         }
         inp = scan.next()
     }

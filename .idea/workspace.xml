@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127da608-f85c-4339-8d34-913600c305d8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Algo/AlgoKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algo/AlgoKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Algo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algo.kt" afterDir="false" />
@@ -21,8 +19,8 @@
       <file leaf-file-name="Algo.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Algo.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+            <state relative-caret-position="457">
+              <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -182,7 +180,7 @@
       <workItem from="1524936503883" duration="2177000" />
       <workItem from="1525006373023" duration="813000" />
       <workItem from="1525009036285" duration="2804000" />
-      <workItem from="1525016720496" duration="1378000" />
+      <workItem from="1525016720496" duration="5371000" />
     </task>
     <task id="LOCAL-00001" summary="second commit - Intellij Idea integration">
       <created>1525010533973</created>
@@ -191,14 +189,22 @@
       <option name="project" value="LOCAL" />
       <updated>1525010533973</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v 0.3 added search option">
+      <created>1525018245754</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1525018245754</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10262000" />
+    <option name="totallyTimeSpent" value="14255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="-5" width="1290" height="1009" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5078125" side_tool="true" weight="0.21151717" />
@@ -218,7 +224,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32890365" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4921875" visible="true" weight="0.21151717" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4921875" weight="0.21151717" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24375" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32890365" />
@@ -234,12 +240,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit - Intellij Idea integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit - Intellij Idea integration" />
+    <MESSAGE value="v 0.3 added search option" />
+    <option name="LAST_COMMIT_MESSAGE" value="v 0.3 added search option" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Algo.kt">
@@ -314,8 +331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Algo.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        <state relative-caret-position="457">
+          <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
         </state>
       </provider>
     </entry>
