@@ -2,9 +2,27 @@ import java.util.*
 
 val scan = java.util.Scanner(System.`in`)
 
+fun min(a: Int, b: Int): Int{
+    if(a < b){
+        return a
+    }
+    else{
+        return b
+    }
+}
+
+fun search(index: String, value:String, memory: Deque<Pair<String, String>>){
+    for(i in memory){
+        var t: Int = min(i.first.length, index.length)
+        for(j in i.first.chars()){
+
+        }
+    }
+}
+
 fun main(args: Array<String>){
     var inp = ""
-    var memory: Deque<Pair<String, String>>  = ArrayDeque<Pair<String, String> >()
+    var memory: Deque<Pair<String,String>>  = ArrayDeque<Pair<String, String> >()
     println("Add instructions")
     while(inp != "Exit" || inp != "exit"){
         if(inp == "Add" || inp == "add"){
@@ -21,6 +39,11 @@ fun main(args: Array<String>){
                     memory.remove(Pair(i.first, i.second))
                 }
             }
+        }
+        if(inp == "Find" || inp == "find"){
+            var index: String = scan.next()
+            var value: String = scan.next()
+            search(index, value, memory)
         }
         inp = scan.next()
     }
