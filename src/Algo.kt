@@ -3,10 +3,11 @@ import java.util.*
 val scan = java.util.Scanner(System.`in`)
 
 fun search(memory: Vector<Pair<String, String>>){
-    var result = Vector<Pair<String, String>>()
+    val result = Vector<Pair<String, String>>()
     for(i in memory){
-        var index: String = scan.next()
-        var value: String = scan.next()
+        val index: String = scan.next()
+        val value: String = scan.next()
+        print(value)
         var pos = 0
         for(j in i.first.chars()){
             if(index[pos] == i.first[j]){
@@ -32,12 +33,11 @@ fun search(memory: Vector<Pair<String, String>>){
 }
 
 fun delete(memory: Vector<Pair<String, String>>){
-    var index: String = scan.next()
-    var value: String = scan.next()
-    var result: Vector<Int> = Vector()
+    val index: String = scan.next()
+    val value: String = scan.next()
+    val result: Vector<Int> = Vector()
     for(i in 0 until memory.size){
         if(memory[i].first == index || memory[i].second == value){
-            println("Deleting pair ${memory[i].first} - ${memory[i].second}")
             result.add(i)
         }
     }
@@ -55,7 +55,7 @@ fun delete(memory: Vector<Pair<String, String>>){
                 println("Incorrect input")
                 p = scan.nextInt()
             }
-            println("Deleting pair ${memory[result[0]].first} - ${memory[result[0]].second}")
+            println("Deleting pair ${memory[result[p-1]].first} - ${memory[result[p-1]].second}")
             memory.remove(Pair(memory[result[p-1]].first, memory[result[p-1]].second))
         }
     }
@@ -63,12 +63,12 @@ fun delete(memory: Vector<Pair<String, String>>){
 
 fun main(args: Array<String>){
     var inp = ""
-    var memory: Vector<Pair<String,String>>  = Vector<Pair<String, String> >()
+    val memory = Vector<Pair<String, String> >()
     println("Write 'help' for help")
     while(inp != "Exit" || inp != "exit"){
         if(inp == "Add" || inp == "add"){
             val index: String = scan.next()
-            var value: String = scan.next()
+            val value: String = scan.next()
             memory.add(Pair(index, value))
             println("Completed")
         }
