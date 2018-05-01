@@ -7,11 +7,11 @@ import java.util.*
 val scan = java.util.Scanner(System.`in`)
 
 fun main(args: Array<String>){
-    var inp = ""
+    var inp: String
     val memory = Vector<Pair<String, String> >()
     println("Write 'help' for help")
     println("To exit from the program type 'exit'")
-    while(inp != "exit"){
+    while(true){
         inp = scan.next()
         inp = inp.toLowerCase()
         if(inp == "add"){
@@ -33,6 +33,10 @@ fun main(args: Array<String>){
         if(inp == "show"){
             show(memory)
             continue
+        }
+        if(inp == "exit"){
+            println("Closing")
+            break
         }
         println("Incorrect input")
     }
